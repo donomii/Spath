@@ -1,3 +1,5 @@
+### SPATH 
+
 Easy access to Racket nested data structures
 
 Turns this
@@ -52,10 +54,10 @@ spath will recurse through the data structure, using each element from
 so any "key not found" or "array index out of bounds" errors will bubble 
 up to the calling function.
 
-    (= key1/key2/key3 data-structure )
+    (s= key1/key2/key3 data-structure )
 
-= works similar to spath, but uses sloppy matching for the keys.  Unlike spath,
-= accepts keys separated by the '/' character, similar to the way directory
+s= works similar to spath, but uses sloppy matching for the keys.  Unlike spath,
+s= accepts keys separated by the '/' character, similar to the way directory
 paths work.  So/you/can/write/keys/like/this.  = breaks the keys up, then tries
 each one first as a number (if possible), then as a string, then as a symbol.
 The first key that works is the one used.
